@@ -6,8 +6,6 @@
 
     border: 0;
 
-    color: white;
-
     font-family: sans-serif;
 
 }
@@ -19,14 +17,39 @@
 
 }
 
+::-webkit-scrollbar {
+
+    width: 15px;
+    height: 15px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+  
+::-webkit-scrollbar-thumb {
+
+    background-color: rgba(240, 240, 240, 0.6);
+
+    border-radius: 6px;
+  
+}
+
 body , html {
 
+
+    
     width: 100%;
     height: 100%;
 
     background-color: black;
 
     overflow: hidden;
+
+    color: black;
 
 }
 
@@ -38,8 +61,222 @@ body , html {
     position: absolute;
     z-index: 0;
 
-    background-image: url(../img/bg.jpg);
+    background-image: url(./img/bg.jpg);
     background-size: cover;
     background-position: center;
+
+    animation: 12s linear infinite alternate bgAnimation;
+
+}
+
+@keyframes bgAnimation {
+
+    from {
+
+        transform: scale(1,1);
+
+    }
+
+    to {
+
+        transform: scale(1.2,1.2);
+
+    }
+
+}
+
+.mainSpace {
+
+    width: 96%;
+    height: 96%;
+
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    top: 2%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    background-color: rgba(240, 240, 240, 0.45);
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(252, 252, 252, 0.09);
+    border-radius: 33px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    scrollbar-width: none;
+
+}
+
+.classCardSpace {
+
+    width: 30%;
+    height: auto;
+
+    margin: 33px 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: rgba(240, 240, 240, 0.6);
+
+    backdrop-filter: blur(33px);
+
+    border: 1px solid rgba(252, 252, 252, 0.09);
+
+    border-radius: 33px;
+
+}
+
+@media (width < 990px) {
+
+    .classCardSpace {
+
+        width: 45%;
+
+    }
+    
+}
+
+@media (width < 480px) {
+
+
+    .classCardSpace {
+
+        width: 90%;
+
+    }
+    
+}
+
+.teacherName {
+
+    width: 90%;
+
+    margin: 18px 0;
+
+}
+
+.teacherName span {
+
+    font-weight: 300;
+
+}
+
+.classStudentsSpace {
+
+
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.studentSpace {
+
+    width: 90%;
+
+    margin: 18px 0;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: rgba(9, 9, 9, 1);
+
+    color: white;
+
+    border-radius: 33px;
+
+}
+
+.studentNameAndScore {
+
+    width: 87%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0;
+
+    border-bottom: 2px solid white;
+
+}
+
+.studentName {
+
+    font-weight: 600;
+
+}
+
+.studentScore {
+
+    padding: 6px;
+
+    border: 3px solid white;
+    border-radius: 6px;
+
+    font-weight: 600;
+
+}
+
+.studentAgeAndAddress {
+
+    width: 81%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 18px 0;
+
+}
+
+.studentAge {
+
+    font-size: 15px;
+
+}
+
+.studentAge span {
+
+    font-weight: 300;
+
+}
+
+.studentAddress {
+
+    font-size: 15px;
+
+    margin-top: 18px;
+
+}
+
+.studentAddress span {
+
+    font-weight: 300;
 
 }
