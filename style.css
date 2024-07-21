@@ -3,78 +3,359 @@
 
     margin: 0;
     padding: 0;
+
+    border: 0;
+
     color: white;
 
+    font-family: sans-serif;
+
+}
+
+*::selection {
+
+    background-color: white;
+    color: black;
+
+}
+
+::-webkit-scrollbar {
+
+    height: 15px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+  
+::-webkit-scrollbar-thumb {
+
+    background-color: rgba(9, 9, 9, 0.6);
+    border-radius: 6px;
+  
 }
 
 body , html {
 
     width: 100%;
     height: 100%;
-    background-image: url(./img/bg.jpg);
-    background-size: cover;
-    background-position: center;
+
+    background-color: black;
+
+    overflow: hidden;
 
 }
 
-body {
+.bg {
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    z-index: 0;
+
+    background-image: url(.//img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+
+    animation: 12s linear infinite alternate bgAnimation;
+
+}
+
+@keyframes bgAnimation {
+
+    from {
+
+        transform: scale(1,1);
+
+    }
+
+    to {
+
+        transform: scale(1.2,1.2);
+
+    }
+
+}
+
+.mainSpace {
+
+    width: 96%;
+    height: 96%;
+
+    position: absolute;
+    z-index: 1;
+    left: 2%;
+    top: 2%;
 
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+
+    background-color: rgba(9, 9, 9, 0.6);
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 33px;
+
+    overflow: hidden;
+
+}
+
+.navBar {
+
+    height: 90px;
+
+    display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navLogo {
+
+    width: 33px;
+    height: 33px;
+
+    padding: 18px 18px 18px 33px;
+
+}
+
+.navTitle {
+
+    font-size: 15px;
+
+}
+
+.navList {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: right;
     align-items: center;
 
 }
 
-.menuSpace {
+.navList ul {
 
-    width: 15%;
-    height: 96%;
-    border-radius: 33px;
-    background-color: rgba(18, 18, 18, 0.33);
-    backdrop-filter: blur(9px);
-    box-shadow: 0px 0 30px -3px black;  
-    transition: width 0.2s;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: right;
+    align-items: center;
+
+
+    margin-right: 33px;
+
+    list-style: none;
 
 }
 
-.windowSpace {
+.navList ul li {
+
+    margin-left: 33px;
+
+    opacity: 0.66;
+    
+    cursor: pointer;
+
+    transition: transform 0.2s , text-shadow 0.2s , opacity 0.2s;
+
+}
+
+.navList ul li a {
+
+    text-decoration: none;
+
+}
+
+.navList ul li:first-child {
+
+    opacity: 1;
+
+}
+
+.navList ul li:hover {
+
+    transform: translateY(-3px) scale(1.02 , 1.02);
+    text-shadow: 0 3px 9px  white;
+    opacity: 1;
+
+}
+
+.navList ul li:active {
+
+    transform: translateY(0px) scale(1 , 1);
+    text-shadow: 0 0 0;
+
+}
+
+@media (width < 480px) {
+
+    .navBar {
+
+        flex-wrap: wrap;
+
+    }
+
+    .navLogo {
+    
+        padding: 18px 18px 18px 0;
+    
+    }
+
+    .navList ul {
+
+        justify-content: center;
+
+        margin: 0;
+
+    }
+
+    .navList ul li {
+
+        margin: 0 18px;
+
+    }
+    
+}
+
+
+.projectsSpace {
+
+    height: 100%;
+
+    margin: 18px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow-y: hidden;
+    overflow-x: scroll;
+
+}
+
+.projectsCardSpace {
+
+    width: 300px;
+    min-width: 300px;
+    height: 400px;
+
+    margin: 0 18px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: rgba(9, 9, 9, 0.6);
+
+    backdrop-filter: blur(24px);
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 33px;
+
+    overflow: hidden;
+
+    transition: transform 0.2s;
+
+}
+
+.projectPhoto {
+
+    width: 100%;
+    flex-basis: 150px;
+
+    object-fit: cover;
+
+    overflow: hidden;
+
+}
+
+.projectTitle {
+
+    width: 90%;
+
+    margin: 18px 0 9px 0;
+
+}
+
+.projectDescription {
 
     width: 81%;
-    height: 96%;
-    transition: width 0.2s;
+    flex-grow: 9;
+
+    margin: 9px 0 18px 0;
+
+    line-height: 27px;
 
 }
 
-@media (800px <= width <= 1200px) {
+.projectOpenLink {
 
-    .menuSpace {
-    
-        width: 21%;
+    width: 150px;
+    flex-basis: 51px;
 
-    }
+    margin: 18px 0;
 
-    .windowSpace {
-    
-        width: 75%;
-    
-    }
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(45, 45, 45, 0.6);
+
+    border-radius: 18px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s , transform 0.2s , box-shadow 0.2s;
+
+
 }
 
-@media (width <= 800px) {
+.projectOpenLink:hover {
 
-    .menuSpace {
-    
-        width: 27%;
 
-    }
+    transform: scale(1.1 , 1.1) translateY(-3px);
 
-    .windowSpace {
-    
-        width: 69%;
-    
-    }
-    
+    box-shadow: 0 3px 24px -6px rgba(45, 45, 45, 0.6);
+
+}
+
+.projectOpenLink:active {
+
+    transform: scale(1 , 1) translateY(0);
+
+    box-shadow: 0 0 0 0 rgba(45, 45, 45, 0.6);
+
+}
+
+.projectsCardSpace:hover {
+
+    transform: translateY(-12px);
+
 }
