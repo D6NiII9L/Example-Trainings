@@ -8,6 +8,24 @@ let projects = [
         img: './schooleProject/img/bg.jpg',
         address : './schooleProject/index.html'
 
+    },
+
+    {
+
+        title : 'P2',
+        description : 'This is description for project 2',
+        img: './img/bg.jpg',
+        address : '#'
+
+    },
+
+    {
+
+        title : 'P3',
+        description : 'This is description for project 3',
+        img: './img/bg.jpg',
+        address : '#'
+
     }
 
 ]
