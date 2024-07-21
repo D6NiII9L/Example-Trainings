@@ -6,8 +6,6 @@
 
     border: 0;
 
-    color: white;
-
     font-family: sans-serif;
 
 }
@@ -46,6 +44,14 @@ body , html {
     background-color: black;
 
     overflow: hidden;
+
+    color: white;
+
+}
+
+a {
+
+    color: white;
 
 }
 
@@ -243,9 +249,9 @@ body , html {
     margin: 18px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
 
     overflow-y: hidden;
