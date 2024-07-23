@@ -1,8 +1,10 @@
-let schoole = {
+let schoole = [
 
-    classA : {
+    {
 
-        teacher : 'Mrs. Johnson',
+        className : 'Class A',
+
+        teacherName : 'Mrs. Johnson',
 
         students : [
 
@@ -40,9 +42,11 @@ let schoole = {
 
     },
 
-    classB : {
+    {
 
-        teacher : 'Mr. Smith',
+        className : 'Class B',
+
+        teacherName : 'Mr. Smith',
 
         students : [
 
@@ -80,49 +84,11 @@ let schoole = {
 
     },
 
-    classC : {
+    {
 
-        teacher : 'Ms. Lee',
+        className : 'Class C',
 
-        students : [
-
-            {
-
-                fName : 'Ava',
-                lName : 'Martinez',
-                age : 15,
-                address : 'San Antonio, Market Street',
-                score : 87
-
-            },
-
-            {
-
-                fName : 'Liam',
-                lName : 'Garcia',
-                age : 16,
-                address : 'San Diego, Harbor Drive',
-                score : 86
-
-            },
-
-            {
-
-                fName : 'Ethan',
-                lName : 'Lopez',
-                age : 17,
-                address : 'Dallas, Elm Street',
-                score : 90
-
-            }
-
-        ]
-
-    },
-
-    classD : {
-
-        teacher : 'Ms. Lee',
+        teacherName : 'Ms. Lee',
 
         students : [
 
@@ -160,13 +126,57 @@ let schoole = {
 
     },
 
-}
+    {
+
+        className : 'Class D',
+
+        teacherName : 'Ms. Lee',
+
+        students : [
+
+            {
+
+                fName : 'Ava',
+                lName : 'Martinez',
+                age : 15,
+                address : 'San Antonio, Market Street',
+                score : 87
+
+            },
+
+            {
+
+                fName : 'Liam',
+                lName : 'Garcia',
+                age : 16,
+                address : 'San Diego, Harbor Drive',
+                score : 86
+
+            },
+
+            {
+
+                fName : 'Ethan',
+                lName : 'Lopez',
+                age : 17,
+                address : 'Dallas, Elm Street',
+                score : 90
+
+            }
+
+        ]
+
+    },
+
+]
 
 let mainSpace = document.getElementById("mainSpace")
 
 for (let c in schoole) {
 
-    let teacher = schoole[c].teacher
+    let className = schoole[c].className
+
+    let teacherName = schoole[c].teacherName
 
     let students = schoole[c].students
 
@@ -200,7 +210,9 @@ for (let c in schoole) {
 
     let classCard = `<div class="classCardSpace">
 
-            <h2 class="teacherName">Teacher: <span>${teacher}</span></h2>
+            <h2 class="className">Class Name: <span>${className}</span></h2>
+
+            <h2 class="teacherName">TeacherName: <span>${teacherName}</span></h2>
 
             ${studentsSpace}
 
