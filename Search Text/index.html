@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div class="mainSpace">
+
+        <div class="searchInputSpace">
+
+            <input type="text" class="searchInput" id="searchInput" placeholder="Search" onchange="search()" onkeyup="search()" onfocus="search()">
+
+        </div>
+
+        <div class="textSpace" id="textSpace">
+
+
+            <textarea id="textInput" class="textInput" placeholder="text" onchange="textShowPage()" onsubmit="textShowPage()"></textarea>
+
+            <p id="textShow" class="textShow" onclick="textPage()"></p>
+
+
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+    
+</body>
+</html>
