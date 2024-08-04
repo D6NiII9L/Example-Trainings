@@ -5,26 +5,26 @@ let projects = [
 
         title : 'Schoole',
         description : 'This project is a simulator of schoole\'s classes.',
-        img: './schooleProject/img/bg.jpg',
-        address : './schooleProject/index.html'
+        img: './Schoole/img/bg.jpg',
+        address : './Schoole/index.html'
 
     },
 
     {
 
-        title : 'P2',
+        title : 'Mini Calculator',
         description : 'This is description for project 2',
-        img: './img/bg.jpg',
-        address : '#'
+        img: './Mini Calculator/img/bg.jpg',
+        address : './Mini Calculator/index.html'
 
     },
 
     {
 
-        title : 'P3',
+        title : 'Search Text',
         description : 'This is description for project 3',
-        img: './img/bg.jpg',
-        address : '#'
+        img: './Search Text/img/bg.jpg',
+        address : './Search Text/index.html'
 
     }
 
