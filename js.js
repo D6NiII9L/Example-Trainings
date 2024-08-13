@@ -13,7 +13,7 @@ let projects = [
     {
 
         title : 'Mini Calculator',
-        description : 'This is description for project 2',
+        description : 'This project is a basic calculator',
         img: './Mini Calculator/img/bg.jpg',
         address : './Mini Calculator/index.html'
 
@@ -22,13 +22,24 @@ let projects = [
     {
 
         title : 'Search Text',
-        description : 'This is description for project 3',
+        description : 'This project find the word you want in the text',
         img: './Search Text/img/bg.jpg',
         address : './Search Text/index.html'
+
+    },
+
+    {
+
+        title : 'Functions',
+        description : 'This project has practis function',
+        img: './Functions/img/bg.jpg',
+        address : './Functions/index.html'
 
     }
 
 ]
+
+projects = projects.reverse()
 
 for (let p in projects) {
 
